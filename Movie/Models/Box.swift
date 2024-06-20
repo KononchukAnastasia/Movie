@@ -10,5 +10,5 @@ import Foundation
 struct Box: Decodable {
     // MARK: - Public Properties
     
-    let movies: [Movie]
+    let films: [Film]
 }

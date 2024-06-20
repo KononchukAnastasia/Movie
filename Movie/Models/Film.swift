@@ -1,5 +1,5 @@
 //
-//  Movie.swift
+//  Film.swift
 //  Movie
 //
 //  Created by Анастасия Конончук on 20.06.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Codable {
+struct Film: Codable, Hashable {
     // MARK: - Public Properties
     
     let id: Int

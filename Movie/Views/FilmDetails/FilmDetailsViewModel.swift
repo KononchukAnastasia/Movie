@@ -1,5 +1,5 @@
 //
-//  MovieDetailsViewModel.swift
+//  FilmDetailsViewModel.swift
 //  Movie
 //
 //  Created by Анастасия Конончук on 20.06.2024.
