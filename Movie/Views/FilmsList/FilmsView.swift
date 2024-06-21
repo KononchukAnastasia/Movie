@@ -18,7 +18,7 @@ struct FilmsView: View {
         NavigationStack {
             ZStack {
                 if filmsViewModel.isLoading {
-                    LoaderView(color: .orange, size: 40)
+                    LoaderView(color: .gray, size: 40)
                 } else if let error = filmsViewModel.error {
                     Text(error)
                         .multilineTextAlignment(.center)
@@ -28,7 +28,7 @@ struct FilmsView: View {
                         LazyVStack {
                             ForEach(filmsViewModel.films, id: \.self) { film in
                                 NavigationLink(
-                                    destination: FilmDetailsView()
+                                    destination: FilmDetailsView(film: film)
                                 ) {
                                     FilmRowView(
                                         name: film.name,

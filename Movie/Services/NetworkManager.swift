@@ -99,4 +99,38 @@ final class NetworkManager {
             }
         }.resume()
     }
+    
+    func fetchImage(
+        url: String,
+        completion: @escaping (Result<Data, NetworkError>) -> ()
+    ) {
+        guard let url = URL(string: url) else {
+            return completion(.failure(.badURL()))
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(.transportError(error)))
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                let statusCode = httpResponse.statusCode
+                
+                if !(200...299).contains(statusCode) {
+                    let message = "Bad response.\nStatus code:"
+                    let error = "\(message) \(statusCode)"
+                    
+                    completion(.failure(.badResponse(error, statusCode)))
+                    return
+                }
+            }
+            
+            guard let data = data else { return }
+            
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
+        }.resume()
+    }
 }

@@ -49,7 +49,7 @@ struct FilmRowView: View {
         }
         .multilineTextAlignment(.leading)
         .padding()
-        .background(.mint.opacity(0.1))
+        .background(.blue.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         
     }
