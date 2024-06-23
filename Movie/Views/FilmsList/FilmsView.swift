@@ -19,22 +19,13 @@ struct FilmsView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Picker("Sort by", selection: $filmsViewModel.sortOption) {
-                    ForEach(FilmsViewModel.SortOption.allCases) { option in
-                        Text(option.rawValue).tag(option)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                .onChange(of: filmsViewModel.sortOption) { _, _ in
+                picker
+                    .padding()
+                    .onChange(of: filmsViewModel.sortOption) { _, _ in
                         filmsViewModel.sortFilms()
-                }
+                    }
                 
-                Button(
-                    "Sorted by \(filmsViewModel.sortOrder.rawValue.lowercased() )"
-                ) {
-                    isShowOptions = true
-                }
+                sortedButton
                 
                 ZStack {
                     if filmsViewModel.isLoading {
@@ -46,7 +37,10 @@ struct FilmsView: View {
                     } else {
                         ScrollView {
                             LazyVStack {
-                                ForEach(filmsViewModel.films, id: \.self) { film in
+                                ForEach(
+                                    filmsViewModel.films,
+                                    id: \.self
+                                ) { film in
                                     NavigationLink(
                                         destination: FilmDetailsView(
                                             film: film)
@@ -79,6 +73,25 @@ struct FilmsView: View {
                     filmsViewModel.sortFilms()
                 }
             }
+        }
+    }
+}
+
+// MARK: - Extension FilmsView
+
+extension FilmsView {
+    private var picker: some View {
+        Picker("Sort by", selection: $filmsViewModel.sortOption) {
+            ForEach(FilmsViewModel.SortOption.allCases) { option in
+                Text(option.rawValue).tag(option)
+            }
+        }
+        .pickerStyle(SegmentedPickerStyle())
+    }
+    
+    private var sortedButton: some View {
+        Button("Sorted by \(filmsViewModel.sortOrder.rawValue.lowercased() )") {
+            isShowOptions = true
         }
     }
 }
