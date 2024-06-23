@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MovieApp: App {
+    // MARK: - Body
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FilmsView()
         }
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B5258A002C2417B9006967E6 /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52589FF2C2417B9006967E6 /* MovieApp.swift */; };
-		B5258A022C2417B9006967E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5258A012C2417B9006967E6 /* ContentView.swift */; };
 		B5258A042C2417BF006967E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5258A032C2417BF006967E6 /* Assets.xcassets */; };
 		B5258A072C2417BF006967E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5258A062C2417BF006967E6 /* Preview Assets.xcassets */; };
 		B5258A122C2418AB006967E6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5258A112C2418AB006967E6 /* API.swift */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		B52589FC2C2417B9006967E6 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52589FF2C2417B9006967E6 /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
-		B5258A012C2417B9006967E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5258A032C2417BF006967E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5258A062C2417BF006967E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5258A112C2418AB006967E6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				B5258A162C241921006967E6 /* Models */,
 				B5258A152C2418D0006967E6 /* Resources */,
 				B5258A102C24187E006967E6 /* Services */,
-				B5258A012C2417B9006967E6 /* ContentView.swift */,
 				B5258A052C2417BF006967E6 /* Preview Content */,
 			);
 			path = Movie;
@@ -233,7 +230,6 @@
 				B5258A1E2C241B25006967E6 /* FilmDetailsView.swift in Sources */,
 				B5258A1A2C241ADD006967E6 /* FilmsView.swift in Sources */,
 				B5258A222C241D1F006967E6 /* Film.swift in Sources */,
-				B5258A022C2417B9006967E6 /* ContentView.swift in Sources */,
 				B5258A122C2418AB006967E6 /* API.swift in Sources */,
 				B5258A002C2417B9006967E6 /* MovieApp.swift in Sources */,
 				B5258A182C241AC3006967E6 /* FilmsViewModel.swift in Sources */,

@@ -13,9 +13,11 @@ struct FilmDetailsView: View {
     @StateObject private var filmDetailsViewModel = FilmDetailsViewModel()
     
     // MARK: - Public Property
+    
     let film: Film
     
     // MARK: - Body
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
