@@ -21,6 +21,9 @@
 		B5258A252C2432C4006967E6 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5258A242C2432C4006967E6 /* LoaderView.swift */; };
 		B5258A272C243686006967E6 /* FilmRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5258A262C243686006967E6 /* FilmRowView.swift */; };
 		B5258A292C25A8D9006967E6 /* FilmDetailsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5258A282C25A8D9006967E6 /* FilmDetailsRowView.swift */; };
+		B5258A2E2C29600F006967E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5258A2D2C29600F006967E6 /* README.md */; };
+		B5258A312C2962C9006967E6 /* demo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5258A2F2C2962C9006967E6 /* demo-2.png */; };
+		B5258A322C2962C9006967E6 /* demo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B5258A302C2962C9006967E6 /* demo-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		B5258A242C2432C4006967E6 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		B5258A262C243686006967E6 /* FilmRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRowView.swift; sourceTree = "<group>"; };
 		B5258A282C25A8D9006967E6 /* FilmDetailsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsRowView.swift; sourceTree = "<group>"; };
+		B5258A2D2C29600F006967E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5258A2F2C2962C9006967E6 /* demo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-2.png"; sourceTree = "<group>"; };
+		B5258A302C2962C9006967E6 /* demo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 		B52589F32C2417B9006967E6 = {
 			isa = PBXGroup;
 			children = (
+				B5258A302C2962C9006967E6 /* demo-1.png */,
+				B5258A2F2C2962C9006967E6 /* demo-2.png */,
+				B5258A2D2C29600F006967E6 /* README.md */,
 				B52589FE2C2417B9006967E6 /* Movie */,
 				B52589FD2C2417B9006967E6 /* Products */,
 			);
@@ -211,7 +220,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5258A2E2C29600F006967E6 /* README.md in Resources */,
+				B5258A312C2962C9006967E6 /* demo-2.png in Resources */,
 				B5258A072C2417BF006967E6 /* Preview Assets.xcassets in Resources */,
+				B5258A322C2962C9006967E6 /* demo-1.png in Resources */,
 				B5258A042C2417BF006967E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +388,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +418,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
