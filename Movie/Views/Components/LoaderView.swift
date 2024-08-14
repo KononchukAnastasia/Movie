@@ -29,7 +29,9 @@ struct LoaderView: View {
                 .linear(duration: 0.8).repeatForever(autoreverses: false),
                 value: isAnimating)
             .onAppear {
-                isAnimating = true
+                DispatchQueue.main.async {
+                    isAnimating = true
+                }
             }
     }
 }
