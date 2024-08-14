@@ -51,7 +51,7 @@ final class FilmsViewModel: ObservableObject {
             case .failure(let error):
                 DispatchQueue.main.async {
                     self?.isLoading = false
-                    self?.error = error.message
+                    self?.error = error.localizedDescription
                 }
             }
         }

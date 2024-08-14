@@ -27,9 +27,12 @@ struct LoaderView: View {
             .rotationEffect(Angle(degrees: isAnimating ? 360 : 0))
             .animation(
                 .linear(duration: 0.8).repeatForever(autoreverses: false),
-                value: isAnimating)
+                value: isAnimating
+            )
             .onAppear {
-                isAnimating = true
+                DispatchQueue.main.async {
+                    isAnimating = true
+                }
             }
     }
 }

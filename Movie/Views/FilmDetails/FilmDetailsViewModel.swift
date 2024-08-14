@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 final class FilmDetailsViewModel: ObservableObject {
     // MARK: - Property Wrappers
@@ -17,19 +18,20 @@ final class FilmDetailsViewModel: ObservableObject {
     // MARK: - Public Methods
     
     func fetchImage(url: String) {
+        guard let url = URL(string: url) else { return }
+        
         isLoading = true
         
-        NetworkManager.shared.fetchImage(url: url) { [weak self] result in
+        KingfisherManager.shared.retrieveImage(with: url) { [weak self] result in
             switch result {
-            case .success(let data):
+            case .success(let value):
                 self?.error = false
                 self?.isLoading = false
-                self?.imageData = data
-            case .failure(_):
-                DispatchQueue.main.async {
-                    self?.isLoading = false
-                    self?.error = true
-                }
+                self?.imageData = value.data()
+                break
+            case .failure:
+                self?.isLoading = false
+                self?.error = true
             }
         }
     }
